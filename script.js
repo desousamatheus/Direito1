@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const actionButton = document.getElementById('btnAction');
     const hiddenFact = document.getElementById('hiddenFact');
@@ -8,9 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
             hiddenFact.classList.toggle('show');
             
             if (hiddenFact.classList.contains('show')) {
-                actionButton.textContent = 'Fechar Detalhes';
+                actionButton.innerHTML = 'Fechar Detalhes <i class="fa-solid fa-chevron-up" style="margin-left: 8px;"></i>';
+                actionButton.style.backgroundColor = '#ef4444'; // Fica vermelho ao abrir
             } else {
-                actionButton.textContent = 'Ver Impacto Real';
+                actionButton.innerHTML = 'Ver Impacto Real';
+                actionButton.style.backgroundColor = '#3b82f6'; // Volta a ser azul
             }
         });
     }
